@@ -10,11 +10,9 @@ void main(){
   int digit = 1;
 
   while (num >= 10) {
-    if (num > 0) {
-      digit++;
-      num = num / 10;
-    }
+    digit++;
+    num = num / 10;
   }
 
-  print("Digits: $digit");
+  print("Number of digits: $digit");
 }
