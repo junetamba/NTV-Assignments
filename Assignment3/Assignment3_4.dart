@@ -1,14 +1,20 @@
 /*Write a program that accepts a number from the user and
-counts the number ofdigits in the given integer using loop.*/
+counts the number of digits in the given integer using loop.*/
 
 import 'dart:io';
 
 void main(){
   stdout.write("Input num: ");
   String? strNumber = stdin.readLineSync();
-  int number = int.parse(strNumber.toString());
-  for (int i = 1; i <= 10; i++) {
-    int output = i * number;
-    print("$number * $i = $output");
+  double num = double.parse(strNumber.toString());
+  int digit = 1;
+
+  while (num >= 10) {
+    if (num > 0) {
+      digit++;
+      num = num / 10;
+    }
   }
+
+  print("Digits: $digit");
 }
